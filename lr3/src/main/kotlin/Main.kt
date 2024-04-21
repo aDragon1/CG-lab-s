@@ -47,7 +47,7 @@ class Art : PApplet() {
     }
 
     override fun draw() {
-        background(0)
+        background(255)
         angle += deltaAngle // inc angle
 
         val rotationX = createRotationXMatrix(angle)
@@ -70,7 +70,7 @@ class Art : PApplet() {
         point(0f, 0f)
 
 //        draw shifted point's
-        stroke(255)
+        stroke(0)
         strokeWeight(8f)
         projectedPoints.forEach { point(it.x, it.y) }
 
@@ -106,7 +106,7 @@ class Art : PApplet() {
 //            projected.mult(300f)
 //            projectedPoints.add(projected)
 
-        rotated.mult(300f) // Для 4й лабы раскомментить строки выше и удалить эти 2
+        rotated.mult(300f) // Для 4й лабы раскомментить строки выше и удалить эту
         return rotated
     }
 
