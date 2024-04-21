@@ -96,15 +96,19 @@ class Art : PApplet() {
             Direction.Z_AXIS -> matrixToVec(multiply(rotationZ, vecToMatrix(vec)) ?: return null)
             Direction.NULL -> return null
         }
-//            val dist = 2
-//            val z = 1 / (dist - rotated.z)
-//            val projection = listOf(
-//                listOf(z, 0f, 0f),
-//                listOf(0f, z, 0f),
-//            )
-//            val projected = matrixToVec(multiply(projection, vecToMatrix(rotated)) ?: return)
-//            projected.mult(300f)
-//            projectedPoints.add(projected)
+//        var rotated = matrixToVec(multiply(rotationX, vecToMatrix(vec)) ?: return null)
+//        rotated = matrixToVec(multiply(rotationX, vecToMatrix(rotated)) ?: return null)
+//        rotated = matrixToVec(multiply(rotationZ, vecToMatrix(rotated)) ?: return null)
+
+//        val dist = 2
+//        val z = 1 / (dist - rotated.z)
+//        val projection = listOf(
+//            listOf(z, 0f, 0f),
+//            listOf(0f, z, 0f),
+//        )
+//        val projected = matrixToVec(multiply(projection, vecToMatrix(rotated)) ?: return null)
+//        projected.mult(300f)
+//        return projected
 
         rotated.mult(300f) // Для 4й лабы раскомментить строки выше и удалить эту
         return rotated
